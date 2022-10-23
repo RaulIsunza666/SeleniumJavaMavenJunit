@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-06T16:34:42 CDT" name="Default suite" finished-at="2022-09-06T16:35:04 CDT" duration-ms="22611">
+  <suite started-at="2022-09-11T16:38:35 CDT" name="Default suite" finished-at="2022-09-11T16:39:11 CDT" duration-ms="36256">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:busqueda.EjecucionTest@15eb5ee5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:busqueda.EjecucionTest@39529185]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-09-06T16:34:42 CDT" name="Default test" finished-at="2022-09-06T16:35:04 CDT" duration-ms="22611">
+    <test started-at="2022-09-11T16:38:35 CDT" name="Default test" finished-at="2022-09-11T16:39:11 CDT" duration-ms="36256">
       <class name="busqueda.EjecucionTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:busqueda.EjecucionTest@15eb5ee5]" started-at="2022-09-06T16:34:42 CDT" name="setUpClass" finished-at="2022-09-06T16:34:42 CDT" duration-ms="240" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:busqueda.EjecucionTest@39529185]" started-at="2022-09-11T16:38:35 CDT" name="setUpClass" finished-at="2022-09-11T16:38:35 CDT" duration-ms="209" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@55a609dd]]>
+                <![CDATA[org.testng.TestRunner@7eb6b6b6]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:busqueda.EjecucionTest@15eb5ee5]" started-at="2022-09-06T16:34:42 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-06T16:35:04 CDT" duration-ms="22324" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:busqueda.EjecucionTest@39529185]" started-at="2022-09-11T16:38:35 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-11T16:39:11 CDT" duration-ms="36004" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,28 +34,22 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#emailLogin"}
-  (Session info: chrome=105.0.5195.102)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'STF-306-RI.local', ip: '2806:2a0:c12:8fd8:3917:9110:b80b:fbbb%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.3', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c2449165005d1d1ba57cda0c50b5df86, findElement {using=id, value=emailLogin}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: /var/folders/jk/dkrxbk010rn...}, goog:chromeOptions: {debuggerAddress: localhost:52168}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52168/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c2449165005d1d1ba57cda0c50b5df86]]>
+              <![CDATA[Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'STF-306-RI.local', ip: '2806:2a0:c12:8fd8:6dff:c485:653b:e301%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.3', java.version: '18.0.2'
+Driver info: org.openqa.selenium.safari.SafariDriver
+Command: [BE0903A9-51A7-4F7B-B556-F6B13D720D22, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 15.5, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 20G415, safari:platformVersion: 11.6.3, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: BE0903A9-51A7-4F7B-B556-F6B13D720D22]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#emailLogin"}
-  (Session info: chrome=105.0.5195.102)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'STF-306-RI.local', ip: '2806:2a0:c12:8fd8:3917:9110:b80b:fbbb%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.3', java.version: '18.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c2449165005d1d1ba57cda0c50b5df86, findElement {using=id, value=emailLogin}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.102, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: /var/folders/jk/dkrxbk010rn...}, goog:chromeOptions: {debuggerAddress: localhost:52168}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52168/devtoo..., se:cdpVersion: 105.0.5195.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c2449165005d1d1ba57cda0c50b5df86
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'STF-306-RI.local', ip: '2806:2a0:c12:8fd8:6dff:c485:653b:e301%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.3', java.version: '18.0.2'
+Driver info: org.openqa.selenium.safari.SafariDriver
+Command: [BE0903A9-51A7-4F7B-B556-F6B13D720D22, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 15.5, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 20G415, safari:platformVersion: 11.6.3, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: BE0903A9-51A7-4F7B-B556-F6B13D720D22
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -64,21 +58,19 @@ at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpRespo
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at steps.Busqueda.BuscarArticulo(Busqueda.java:54)
-at ✽.cuando el usario ingresa con el usuario prueba.amco1@gmail.com(file:///Users/raulisunza/Documents/Automatizacio%CC%81n/EclipseAuto/seleniumIDE/src/test/java/feature/Busqueda.feature:5)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:105)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+at ✽.se muestran los perfiles y seleecciona el admmin(file:///Users/raulisunza/Documents/Automatizacio%CC%81n/EclipseAuto/seleniumIDE/src/test/java/feature/Busqueda.feature:9)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:busqueda.EjecucionTest@15eb5ee5]" started-at="2022-09-06T16:35:04 CDT" name="tearDownClass" finished-at="2022-09-06T16:35:04 CDT" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:busqueda.EjecucionTest@39529185]" started-at="2022-09-11T16:39:11 CDT" name="tearDownClass" finished-at="2022-09-11T16:39:11 CDT" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

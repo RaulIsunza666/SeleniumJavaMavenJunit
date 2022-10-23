@@ -1,34 +1,60 @@
 package busqueda;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 public class AbrirPropiedades {
-	
-	public Properties propiedades() throws IOException {
+
+	public JSONObject leerJson(String elemento) {
+		JSONObject jobj = null;
+		try {
+			jobj = (JSONObject) abrirArchivoJson();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		} catch (ParseException e) {
+			throw new RuntimeException(e);
+		}
+		JSONObject entidad = (JSONObject) jobj.get(elemento);
+		return  entidad;
+	}
+
+	private Object abrirArchivoJson() throws IOException, ParseException{
+		FileReader json = new FileReader("./src/test/resources/identificadores.json");
+		return new JSONParser().parse(json);
+	}
+
+	private Properties propiedades()  {
 		Properties propiedades = new Properties();
-		propiedades.load(new FileReader("./src/test/resources/test.properties"));
+		try {
+			propiedades.load(new FileReader("./src/test/resources/test.properties"));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return propiedades;
 	}
 	
-	public String getURL() throws IOException {
-		return propiedades().getProperty("urlPrueba");
-	}
-	
-	public String getChromeDriver() throws IOException {
+	public String getChromeDriver() {
 		return propiedades().getProperty("chromeDriver");
 	}
 	
-	public String getEdgeDriver() throws IOException {
+	public String getEdgeDriver() {
 		return propiedades().getProperty("edgeDriver");
 	}
 	
-	public String getFirefoxDriver() throws IOException {
+	public String getFirefoxDriver() {
 		return propiedades().getProperty("firefoxDriver");
 	}
 	
-	public String getRutaGuardarImagen() throws IOException {
+	public String getRutaGuardarImagen() {
 		return propiedades().getProperty("screenShots");
 	}
+
 }

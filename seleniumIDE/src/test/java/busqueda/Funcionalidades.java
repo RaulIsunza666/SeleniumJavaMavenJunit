@@ -2,7 +2,6 @@ package busqueda;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -13,19 +12,27 @@ public class Funcionalidades {
 	
 	AbrirPropiedades guardarImagen = new AbrirPropiedades();
 	
-	public void GuardarImagen(WebDriver driver) throws IOException{
+	public void guardarImagen(WebDriver driver){
 		
 		 // Convert web driver object to TakeScreenshot
 	    TakesScreenshot imagen = (TakesScreenshot) driver;
 	    // Call getScreenshotAs method to create image file
 	    File source = imagen.getScreenshotAs(OutputType.FILE);
 	    // Copy file at destination
-	    FileHandler.copy(source, new File(guardarImagen.getRutaGuardarImagen() + System.currentTimeMillis() + ".png"));
+	    try {
+			FileHandler.copy(source, new File(guardarImagen.getRutaGuardarImagen() + System.currentTimeMillis() + ".png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	    System.out.println("imagen tomada");
 	}
 	  
-	public void Sleeper(WebDriver driver) {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	public void Sleeper(long segundos) {
+		 try {
+			Thread.sleep(segundos);
+		} catch (InterruptedException e) {
+			System.err.println(e);
+		}
 	}
 	
 }
