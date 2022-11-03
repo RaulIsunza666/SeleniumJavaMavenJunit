@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>Autoatizacion</groupId>
+  <groupId>Automatizacion</groupId>
   <artifactId>CucumberTest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>CucumberTest</name>
@@ -9,6 +9,11 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>18</maven.compiler.source>
     <maven.compiler.target>18</maven.compiler.target>
+       <aspectj.version>1.8.10</aspectj.version>
+       <json.version>1.1.1</json.version>
+       <java.version>1.8</java.version>
+       <maven.compiler.version>3.10.1</maven.compiler.version>
+       <jetbrains.version>23.0.0</jetbrains.version>
   </properties>
   
   <dependencies>
@@ -16,7 +21,7 @@
     <dependency>
       <groupId>com.googlecode.json-simple</groupId>
       <artifactId>json-simple</artifactId>
-      <version>1.1.1</version>
+      <version>${json.version}</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -31,30 +36,68 @@
       <version>4.4.0</version>
       <scope>test</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <version>7.6.1</version>
-      <scope>test</scope>
-    </dependency>
+       <groupId>org.jetbrains</groupId>
+       <artifactId>annotations</artifactId>
+       <version>${jetbrains.version}</version>
+       <scope>compile</scope>
+     </dependency>
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-    <dependency>
+   <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
-      <version>7.6.0</version>
+      <version>7.8.1</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+      <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+      <dependency>
+          <groupId>io.cucumber</groupId>
+          <artifactId>cucumber-junit</artifactId>
+          <version>7.8.1</version>
+          <scope>test</scope>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/io.cucumber/tag-expressions -->
+      <dependency>
+          <groupId>io.cucumber</groupId>
+          <artifactId>tag-expressions</artifactId>
+          <version>4.1.0</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm-deps -->
     <dependency>
       <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-testng</artifactId>
-      <version>7.6.0</version>
+      <artifactId>cucumber-jvm-deps</artifactId>
+      <version>1.0.6</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/gherkin -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>gherkin</artifactId>
+      <version>24.1.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>1.10.19</version>
+      <scope>test</scope>
     </dependency>
       <dependency>
-          <groupId>org.jetbrains</groupId>
-          <artifactId>annotations</artifactId>
-          <version>RELEASE</version>
-          <scope>compile</scope>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-support</artifactId>
+          <version>4.4.0</version>
+          <scope>test</scope>
+      </dependency>
+      <!--Dependencias para allure framwork -->
+      <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
+      <dependency>
+          <groupId>io.qameta.allure</groupId>
+          <artifactId>allure-cucumber7-jvm</artifactId>
+          <version>2.19.0</version>
+      </dependency>
+      <dependency>
+          <groupId>com.opencsv</groupId>
+          <artifactId>opencsv</artifactId>
+          <version>4.1</version>
       </dependency>
   </dependencies>
 <build>
@@ -99,6 +142,11 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
+          <plugin>
+              <groupId>io.qameta.allure</groupId>
+              <artifactId>allure-maven</artifactId>
+              <version>2.10.0</version>
+          </plugin>
       </plugins>
     </pluginManagement>
   </build>
